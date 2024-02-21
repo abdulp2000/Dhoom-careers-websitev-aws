@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "repl-nix-dhoom-careers-website"
+version = "0.1.0"
+description = ""
+authors = ["Replit user <<>>"]
+readme = "README.md"
+packages = [{include = "repl_nix_dhoom_careers_website"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.2"
+sqlalchemy = "^2.0.27"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

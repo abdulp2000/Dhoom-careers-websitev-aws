@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Dhoom Careers</title>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        Dhoom Careers
+      </h1>
+      <div class="row" style="margin-bottom:32px">  
+        <div class="col-md-6">  
+      <p class="lead">
+        At <b>Dhoom</b>, our mission is to connect talented individuals with rewarding career opportunities that empower personal and professional growth. We believe that everyone deserves to find fulfilling work that aligns with their skills, passions, and aspirations. By providing a platform that brings together job seekers and employers in a seamless and efficient manner, we aim to facilitate meaningful connections that drive success for both parties. Whether you're a recent graduate embarking on your career journey or an experienced professional seeking new challenges, we're committed to supporting you every step of the way. Join us in our mission to build a brighter future for the workforce, one job match at a time."
+      </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpg" style="height:320px;border-radius:4px;">
+        </div>
+       </div>
+      <h2 class="text-center mt-2 mb-4" > Open Positions </h2>
+      <div>
+        {% for job in jobs() %} 
+           {% include 'jobitem.html'%}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+       <button class="btn btn-primary btn-lg">Contact Us</button>
+      </div>
+    </div>
+      {% include 'footer.html'%}
+  </body>
+</html>
